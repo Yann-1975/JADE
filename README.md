@@ -1,10 +1,10 @@
-# BELLA_VITA
+# JADE
 
 This project is for the developers digital portfolio.
 
 ## Overview
 
-BELLA_VITA is designed as a digital portfolio platform for developers. It allows users to showcase their work, skills, and achievements in a modern, organized way.
+JADE is designed as a digital portfolio platform for developers. It allows users to showcase their work, skills, and achievements in a modern, organized way.
 
 ## Features
 
