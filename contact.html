@@ -1,1 +1,61 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Yann Tchamba</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>Yann Tchamba</h1>
+        <p class="subtitle">Chief Technology Officer</p>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="business.html" class="nav-link">Business Showcase</a>
+        <a href="problemsolving.html" class="nav-link">Problem Solving</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section contact-section">
+      <h2>Contact</h2>
+      <p>621 Abito Clippers Quay, Salford, M50 3BP • 07454 101201 • <a href="mailto:Yannfreddy1975@gmail.com">Yannfreddy1975@gmail.com</a></p>
+
+      <!-- To enable real email sending, replace the action with your Formspree endpoint -->
+      <!-- Example: action="https://formspree.io/f/yourformid" method="POST" -->
+      <form id="contactForm" action="https://formspree.io/f/yourformid" method="POST" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Send</button>
+          <button type="reset" class="btn btn-outline">Reset</button>
+        </div>
+
+        <p class="form-feedback" id="formFeedback" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Yann Tchamba — All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
