@@ -1,36 +1,44 @@
 
-// Navigation active link highlight (simple)
 document.addEventListener("DOMContentLoaded", () => {
-  const navLinks = document.querySelectorAll(".main-nav .nav-link");
-  navLinks.forEach(link => {
-    if (link.href && link.href.endsWith(location.pathname.split("/").pop())) {
-      navLinks.forEach(l => l.classList.remove("active"));
-      link.classList.add("active");
-    }
-  });
-
-  // Contact form handling: if Formspree action still is the placeholder, prevent default and show a friendly message.
   const form = document.getElementById("contactForm");
-  if (form) {
-    form.addEventListener("submit", async (e) => {
-      const feedback = document.getElementById("formFeedback");
-      // If the action contains "formspree.io/f/yourformid" then it's a placeholder - use JS fallback
-      const action = (form.getAttribute("action") || "").trim();
-      if (action.includes("yourformid") || action === "") {
-        e.preventDefault();
-        feedback.textContent = "This site is running locally. To receive messages, replace the form action with your Formspree endpoint. (See instructions in README.)";
-        // simple UX: simulate success
-        setTimeout(() => {
-          feedback.textContent = "Message received locally. Thank you — Yann will get back to you.";
-          form.reset();
-        }, 600);
-        return;
-      }
+  const feedback = document.getElementById("formFeedback");
+  const successBox = document.getElementById("successAnimation");
 
-      // If a real Formspree endpoint is used, optionally show progress and let the browser submit
+  if (form) {
+    form.addEventListener("input", () => {
+      if (form.checkValidity()) {
+        feedback.textContent = "";
+      }
+    });
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
       feedback.textContent = "Sending...";
-      // Let the browser proceed with default submit (no e.preventDefault()) so Formspree receives the POST.
-      // If you prefer AJAX to Formspree, implement fetch here.
+      feedback.style.color = "#444";
+
+      try {
+        const formData = new FormData(form);
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: formData,
+          headers: { Accept: "application/json" }
+        });
+
+        if (response.ok) {
+          successBox.style.display = "block";
+          feedback.textContent = "";
+          form.reset();
+          setTimeout(() => {
+            successBox.style.display = "none";
+          }, 5000);
+        } else {
+          feedback.textContent = "Error sending message.";
+          feedback.style.color = "red";
+        }
+      } catch (err) {
+        feedback.textContent = "Network error.";
+        feedback.style.color = "red";
+      }
     });
   }
 });
