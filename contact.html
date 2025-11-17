@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,78 +8,102 @@
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <h1>Yann Tchamba</h1>
-        <p class="subtitle">Chief Technology Officer</p>
-      </div>
-      <nav class="main-nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="skills.html" class="nav-link">Skills</a>
-        <a href="business.html" class="nav-link">Business Showcase</a>
-        <a href="problemsolving.html" class="nav-link">Problem Solving</a>
-        <a href="contact.html" class="nav-link active">Contact</a>
-      </nav>
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <h1>Yann Tchamba</h1>
+      <p class="subtitle">Chief Technology Officer</p>
     </div>
-  </header>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="skills.html" class="nav-link">Skills</a>
+      <a href="business.html" class="nav-link">Business Showcase</a>
+      <a href="problemsolving.html" class="nav-link">Problem Solving</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <main class="container">
-    <section class="section contact-section">
-      <h2>Contact</h2>
-      <p>
-        621 Abito Clippers Quay, Salford, M50 3BP • 07454 101201 •
-        <a href="mailto:Yannfreddy1975@gmail.com">Yannfreddy1975@gmail.com</a>
-      </p>
+<main class="container">
+  <section class="section contact-section">
+    <h2>Contact</h2>
+    <p>
+      621 Abito Clippers Quay, Salford, M50 3BP • 07454 101201 • 
+      <a href="mailto:Yannfreddy1975@gmail.com">Yannfreddy1975@gmail.com</a>
+    </p>
 
-      <!-- Contact layout wrapper -->
-      <div class="contact-wrapper">
+    <div class="contact-enhanced-grid">
 
-        <!-- CONTACT FORM -->
-        <form id="contactForm"
-              action="https://formspree.io/f/yourformid"
-              method="POST" 
-              novalidate>
+      <!-- CONTACT FORM -->
+      <form id="contactForm" name="yann-tchamba-contact"
+            action="https://formspree.io/f/yourformid"
+            method="POST" novalidate>
 
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" required />
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required autocomplete="name" />
 
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required />
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required autocomplete="email" />
 
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="6" required></textarea>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
 
-          <div class="form-actions">
-            <button type="submit" class="btn">Send</button>
-            <button type="reset" class="btn btn-outline">Reset</button>
-          </div>
+        <div class="form-actions">
+          <button type="submit" class="btn">Send</button>
+          <button type="reset" class="btn btn-outline">Reset</button>
+        </div>
 
-          <p class="form-feedback" id="formFeedback" aria-live="polite"></p>
-        </form>
+        <div id="successAnimation" class="success-animation">
+          ✓ Message Sent Successfully
+        </div>
 
-        <!-- INTERACTIVE GOOGLE MAP -->
+        <p class="form-feedback" id="formFeedback" aria-live="polite"></p>
+      </form>
+
+      <!-- MAP + OPEN HOURS -->
+      <div class="right-panel">
+
         <div class="map-container">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2371.2794289576406!2d-2.299706323909907!3d53.47034527235059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae4eae442b01%3A0xa67b5cbb6743505d!2sAbito%20Salford!5e0!3m2!1sen!2uk!4v1709411110000!5m2!1sen!2uk"
-            width="100%"
-            height="100%"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy">
+            width="100%" height="100%" style="border:0;" loading="lazy">
           </iframe>
+
+          <!-- Animated Pin -->
+          <div class="map-pin"></div>
         </div>
 
+        <!-- Opening Hours -->
+        <div class="opening-hours">
+          <h3>Opening Hours</h3>
+          <ul>
+            <li><strong>Monday–Friday:</strong> 9:00 AM – 6:00 PM</li>
+            <li><strong>Saturday:</strong> 10:00 AM – 4:00 PM</li>
+            <li><strong>Sunday:</strong> Closed</li>
+          </ul>
+
+          <a class="btn small" target="_blank"
+             href="https://www.google.com/maps/dir/?api=1&destination=Abito+Salford">
+             Get Directions →
+          </a>
+        </div>
       </div>
-    </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Yann Tchamba — All rights reserved.</p>
     </div>
-  </footer>
+  </section>
+</main>
 
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/447454101201" class="whatsapp-float" target="_blank">
+  <img src="assets/whatsapp-icon.png" alt="WhatsApp Chat" />
+</a>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Yann Tchamba — All rights reserved.</p>
+  </div>
+</footer>
 </body>
 </html>
