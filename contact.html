@@ -2,35 +2,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact - Yann Tchamba</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Yann Tchamba</title>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-<header>
-<h1>Contact Me</h1>
-<nav>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="contact.html">Contact</a></li>
-<li><a href="skills.html">Skills</a></li>
-<li><a href="showcase.html">Business Showcase</a></li>
-<li><a href="problem-solving.html">Problem Solving</a></li>
-</ul>
-</nav>
-</header>
+  <header class="site-header">
+    <div class="container header-flex">
+      <h1 class="brand">Contact</h1>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+      <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="showcase.html">Projects</a>
+        <a href="problem-solving.html">Problem-Solving</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<section>
-<h2>Contact Details</h2>
-<p>Email: <a href="mailto:Yannfreddy1975@gmail.com">Yannfreddy1975@gmail.com</a></p>
+  <main class="container">
+    <section class="card glass">
+      <h2>Contact Details</h2>
+      <p><strong>Phone:</strong> <a href="tel:+447454101201">07454 101201</a></p>
+      <p><strong>Email:</strong> <a href="mailto:Yannfreddy1975@gmail.com">Yannfreddy1975@gmail.com</a></p>
+      <p><strong>Address:</strong> 621 Abito Clippers Quay, Salford, M50 3BP</p>
 
-<h3>Social Media</h3>
-<ul>
-<li><a href="https://github.com/new" target="_blank">GitHub</a></li>
-<li><a href="https://www.linkedin.com/in/yann-tchamba-76097a2b9/" target="_blank">LinkedIn</a></li>
-<li><a href="https://www.snapchat.com/web/1ff18e8d-429f-5d04-bf0c-38ce2ab6aaa2" target="_blank">Snapchat</a></li>
-</ul>
-</section>
+      <!-- Reservation button opens user's mail client with a prefilled subject -->
+      <a class="btn" href="mailto:reservations@demo-restaurant.local?subject=Reservation%20Request">Make a Reservation</a>
+    </section>
+
+    <section class="card glass">
+      <h2>Find Me</h2>
+      <!-- Google Maps embed (adjust the src to the exact place if you have coords) -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.14015!2d-2.2933!3d53.4694"
+        width="100%" height="350" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year2"></span> Yann Tchamba</p>
+  </footer>
+
+  <script src="assets/script.js"></script>
 </body>
 </html>
