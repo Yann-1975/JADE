@@ -4,8 +4,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Problem Solving — Yann Tchamba</title>
+  <title>Problem Solving — Restaurant Digital Transformation</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header class="site-header">
@@ -26,21 +27,79 @@
 
   <main class="container">
     <section class="section">
-      <h2>Approach to Challenges</h2>
-      <p>Every challenge is approached methodically with measurable outcomes in mind. Typical process:</p>
+      <h2>Restaurant Digital Transformation — Case Study</h2>
 
-      <ol class="solution-steps">
-        <li><strong>Discover:</strong> Gather context, stakeholders, goals and constraints.</li>
-        <li><strong>Diagnose:</strong> Analyze root causes and identify key metrics.</li>
-        <li><strong>Design:</strong> Craft multiple solution options, balancing cost, speed and risk.</li>
-        <li><strong>Deliver:</strong> Prototype, test, iterate and deploy with monitoring.</li>
-        <li><strong>Measure & Improve:</strong> Use data to refine and scale the solution.</li>
-      </ol>
-
-      <h3>Case study — Process Automation</h3>
+      <h3>Business Context</h3>
       <p>
-        Problem: Manual data entry causing delays and errors. Solution: Built a lightweight automation pipeline, integrated with existing systems, and trained staff.
-        Result: Reduced processing time by 60% and improved data accuracy.
+        Small restaurant seeking to modernize customer engagement, streamline bookings and improve communication
+        without heavy upfront investment. Goals: better online presence, social integration, easy bookings, and analytics.
+      </p>
+
+      <h3>Key Requirements implemented</h3>
+      <ul>
+        <li>Social media integration (Facebook / Instagram / Twitter)</li>
+        <li>Clear display of contact details</li>
+        <li>Interactive booking/feedback form that generates an email for staff</li>
+        <li>Responsive design and accessible UI</li>
+      </ul>
+
+      <h3>How the web solution works</h3>
+      <p>
+        The page provides a simple booking/feedback form. When a customer fills the form and clicks <em>Send Booking</em>
+        the site automatically opens the visitor's email client with a pre-filled email to the restaurant address.
+        This approach requires no server and is ideal for fast deployment. It also allows staff to receive bookings directly
+        in their inbox and respond using normal email workflows.
+      </p>
+
+      <div class="restaurant-demo">
+        <div class="demo-left">
+          <h4>Restaurant contact</h4>
+          <p><strong>Address:</strong> 123 Pizza Lane, Salford</p>
+          <p><strong>Phone:</strong> <a href="tel:+447454101201">07454 101201</a></p>
+          <p><strong>Email:</strong> <a href="mailto:Yannfreddy1975@gmail.com">Yannfreddy1975@gmail.com</a></p>
+
+          <h4>Follow</h4>
+          <p>
+            <a href="https://facebook.com/" target="_blank" rel="noopener">Facebook</a> •
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a> •
+            <a href="https://twitter.com/" target="_blank" rel="noopener">X / Twitter</a>
+          </p>
+        </div>
+
+        <div class="demo-right">
+          <h4>Booking / Feedback Form</h4>
+          <form id="bookingForm">
+            <label for="custName">Your name</label>
+            <input id="custName" name="custName" type="text" required />
+
+            <label for="custEmail">Your email</label>
+            <input id="custEmail" name="custEmail" type="email" required />
+
+            <label for="bookingDate">Date & Time</label>
+            <input id="bookingDate" name="bookingDate" type="datetime-local" required />
+
+            <label for="partySize">Party size</label>
+            <input id="partySize" name="partySize" type="number" min="1" value="2" required />
+
+            <label for="notes">Notes / Requests</label>
+            <textarea id="notes" name="notes" rows="4"></textarea>
+
+            <div class="form-actions">
+              <button id="sendBooking" class="btn" type="submit">Send Booking</button>
+              <button type="reset" class="btn btn-outline">Reset</button>
+            </div>
+
+            <p id="bookingStatus" class="form-feedback" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+
+      <h4>Why this design?</h4>
+      <p>
+        The form-first layout puts the user's action (booking) front and centre while showing contact and social proof.
+        Using a mailto-based booking avoids the need for a backend yet still provides staff a clear structured email
+        with all booking details. The page is responsive, accessible, and designed so the form can be migrated to a
+        database-backed booking engine later with minimal changes.
       </p>
     </section>
   </main>
