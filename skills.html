@@ -2,54 +2,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Skills & Experience - Yann Tchamba</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Skills — Yann Tchamba</title>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-<header>
-<h1>Skills & Professional Background</h1>
-<nav>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="contact.html">Contact</a></li>
-<li><a href="skills.html">Skills</a></li>
-<li><a href="showcase.html">Business Showcase</a></li>
-<li><a href="problem-solving.html">Problem Solving</a></li>
-</ul>
-</nav>
-</header>
+  <header class="site-header">
+    <div class="container header-flex">
+      <h1 class="brand">Yann Tchamba</h1>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+      <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="showcase.html">Projects</a>
+        <a href="problem-solving.html">Problem-Solving</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<section>
-<h2>Education</h2>
-<ul>
-<li>PhD Software Development – University of Salford (2018–2022)</li>
-<li>MSc Software Development – University of Salford (2017–2018)</li>
-<li>BSc Innovation & Technology – University of Salford (2013–2016)</li>
-<li>BTEC Business Management – Kirklees College (2011–2013)</li>
-<li>GCSE – BEEDI Douala Ext (2006–2011)</li>
-</ul>
+  <main class="container">
+    <section class="card glass">
+      <h2>Key skills</h2>
+      <ul class="skills-list">
+        <li>Strategic thinking</li>
+        <li>Cloud computing & cybersecurity</li>
+        <li>Leadership & team building</li>
+        <li>Communication & stakeholder management</li>
+        <li>Problem solving & innovation</li>
+        <li>Collaboration & adaptability</li>
+      </ul>
+    </section>
 
-<h2>Work Experience</h2>
-<ul>
-<li>Chief Technology Officer – NovaEdge Technologies (2021–Present)</li>
-<li>Head of Technology & Innovation – TechSphere Group (2018–2021)</li>
-<li>Software Engineer / Systems Analyst – Northedge Solutions (2016–2017)</li>
-<li>IT Support & Junior Developer – GlobalLink Services (2015–2016)</li>
-</ul>
+    <section class="card glass">
+      <h2>Education & certifications</h2>
+      <table class="doc-table">
+        <thead>
+          <tr><th>Period</th><th>Qualification</th><th>Institution</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Sept 2018 - July 2022</td><td>PhD Software Development</td><td>Salford University</td></tr>
+          <tr><td>Sept 2017 - July 2018</td><td>MSc Software Development</td><td>Salford University</td></tr>
+          <tr><td>Sept 2013 - July 2016</td><td>BSc Innovation & Tech</td><td>Salford University</td></tr>
+          <tr><td>Sept 2011 - July 2013</td><td>BTEC Business Management</td><td>Kirklees College</td></tr>
+          <tr><td>Sept 2006 - July 2011</td><td>GCSE</td><td>Beedi-Douala Ext</td></tr>
+        </tbody>
+      </table>
+    </section>
 
-<h2>Key Skills</h2>
-<ul>
-<li>Strategic Thinking</li>
-<li>Technical Expertise</li>
-<li>Leadership</li>
-<li>Communication</li>
-<li>Problem Solving</li>
-<li>Innovation</li>
-<li>Collaboration</li>
-<li>Adaptability</li>
-</ul>
-</section>
+    <section class="card glass">
+      <h2>Work experience</h2>
+      <ol>
+        <li><strong>Mar 2021 - Present:</strong> Chief Technology Officer, NovaEdge Technologies</li>
+        <li><strong>Jan 2018 - Feb 2021:</strong> Head of Technology & Innovation, TechSphere Group</li>
+        <li><strong>Jul 2016 - Dec 2017:</strong> Software Engineer / Systems Analyst, Northedge Solutions</li>
+        <li><strong>Jun 2015 - Jun 2016:</strong> IT Support & Junior Developer, GlobalLink Services</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year3"></span> Yann Tchamba</p>
+  </footer>
+
+  <script src="assets/script.js"></script>
 </body>
 </html>
