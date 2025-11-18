@@ -2,55 +2,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Problem-Solving – Restaurant Transformation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Problem Solving - Restaurant Digital Transformation</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
 <body>
-
-<nav>
-    <a href="index.html">Home</a> |
-    <a href="contact.html">Contact</a> |
-    <a href="skills.html">Skills</a> |
-    <a href="showcase.html">Business Showcase</a> |
-    <a href="problem-solving.html">Problem-Solving</a>
-</nav>
-
+<header>
 <h1>Restaurant Digital Transformation</h1>
-
-<h2>Business Context</h2>
-<p>
-As CTO, my goal is to support the restaurant in modernising operations by improving customer engagement,
-streamlining table bookings, and enhancing online visibility. This page demonstrates how simple web
-technology can meet real business needs without requiring complex systems.
-</p>
-
-<h2>Social Media Links</h2>
+<nav>
 <ul>
-    <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
-    <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
-    <li><a href="https://twitter.com" target="_blank">Twitter/X</a></li>
+<li><a href="index.html">Home</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="skills.html">Skills</a></li>
+<li><a href="showcase.html">Business Showcase</a></li>
+<li><a href="problem-solving.html">Problem Solving</a></li>
+</ul>
+</nav>
+</header>
+
+<section>
+<h2>Business Context</h2>
+<p>The restaurant aims to modernize communication, improve customer engagement, and streamline the booking process through digital transformation.</p>
+
+<h2>Social Media</h2>
+<ul>
+<li><a href="#">Facebook</a></li>
+<li><a href="#">Instagram</a></li>
+<li><a href="#">Twitter/X</a></li>
 </ul>
 
-<h2>Restaurant Contact Details</h2>
-<p><strong>Restaurant Name:</strong> Golden Spoon Bistro</p>
-<p><strong>Phone:</strong> 0123 456 789</p>
-<p><strong>Email:</strong> info@goldenspoon.com</p>
-<p><strong>Address:</strong> 123 Market Street, Manchester</p>
+<h2>Contact Details</h2>
+<p>Email: restaurant@example.com</p>
+<p>Phone: 0200 123 4567</p>
 
-<h2>Interactive Booking / Feedback Form</h2>
+<h2>Booking / Feedback Form</h2>
+<form id="contactForm">
+<label>Name:</label>
+<input type="text" id="name" required>
 
-<form action="mailto:info@goldenspoon.com" method="POST" enctype="text/plain">
-    <label>Your Name:</label><br>
-    <input type="text" name="Name" required><br><br>
+<label>Message / Booking Request:</label>
+<textarea id="message" required></textarea>
 
-    <label>Booking Request / Feedback:</label><br>
-    <textarea name="Message" rows="5" required></textarea><br><br>
-
-    <label>Your Email:</label><br>
-    <input type="email" name="CustomerEmail" required><br><br>
-
-    <button type="submit">Send Email</button>
+<button type="submit">Generate Email</button>
 </form>
 
+<p id="emailOutput"></p>
+</section>
 </body>
 </html>
