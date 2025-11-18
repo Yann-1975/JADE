@@ -5,5 +5,5 @@ yann-website/
 ├─ skills.html
 ├─ business.html
 ├─ problemsolving.html
-├─ style.css
+├─ assets/style.css
 └─ script.js
