@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,13 +15,13 @@
         <h1>Yann Tchamba</h1>
         <p class="subtitle">Chief Technology Officer</p>
       </div>
-
-      <div class="header-controls">
-        <button id="darkToggle" class="icon-btn" aria-pressed="false" title="Toggle dark mode" aria-label="Toggle dark mode">
-          <!-- Sun / Moon SVG -->
-          <svg id="dmIcon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-        </button>
-      </div>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="business.html" class="nav-link">Business Showcase</a>
+        <a href="problemsolving.html" class="nav-link">Problem Solving</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
     </div>
   </header>
 
@@ -32,121 +33,48 @@
         <a href="mailto:Yannfreddy1975@gmail.com">Yannfreddy1975@gmail.com</a>
       </p>
 
-      <div class="contact-grid">
+      <div class="contact-wrapper">
+        <form id="mailtoForm" class="contact-form" aria-label="Contact form">
+          <label for="fullname">Name</label>
+          <input id="fullname" name="fullname" type="text" required />
 
-        <!-- LEFT: FORM + CONTACT CARD + ICON LIST -->
-        <div class="left-col">
+          <label for="emailaddr">Email</label>
+          <input id="emailaddr" name="emailaddr" type="email" required />
 
-          <!-- Contact Card -->
-          <div class="contact-card" aria-label="Yann Tchamba contact card">
-            <div class="card-top">
-              <div class="card-info">
-                <h3>Yann Tchamba</h3>
-                <p class="role">Chief Technology Officer</p>
-              </div>
-              <div class="card-actions">
-                <a href="mailto:Yannfreddy1975@gmail.com" class="icon-link" aria-label="Email"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M3 7.5v9A1.5 1.5 0 0 0 4.5 18h15a1.5 1.5 0 0 0 1.5-1.5v-9" stroke="currentColor" fill="none" stroke-width="1.4" stroke-linecap="round"/></svg></a>
-                <a href="tel:+447454101201" class="icon-link" aria-label="Call"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.77 19.77 0 0 1 3 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72 12.34 12.34 0 0 0 .7 3.12 2 2 0 0 1-.45 2.11L9.21 11.8a16 16 0 0 0 5 5l1.85-1.03a2 2 0 0 1 2.11-.45 12.34 12.34 0 0 0 3.12.7A2 2 0 0 1 22 16.92z" stroke="currentColor" fill="none" stroke-width="1.4" stroke-linecap="round"/></svg></a>
-              </div>
-            </div>
+          <label for="messagebody">Message</label>
+          <textarea id="messagebody" name="messagebody" rows="6" required></textarea>
 
-            <div class="card-body">
-              <p><strong>Address:</strong> 621 Abito Clippers Quay, Salford, M50 3BP</p>
-              <p><strong>Phone:</strong> <a href="tel:+447454101201">07454 101201</a></p>
-              <p><strong>Email:</strong> <a href="mailto:Yannfreddy1975@gmail.com">Yannfreddy1975@gmail.com</a></p>
-              <div class="card-tags">
-                <span class="tag">CTO</span>
-                <span class="tag">Cloud</span>
-                <span class="tag">Cybersecurity</span>
-              </div>
-            </div>
+          <div class="form-actions">
+            <button id="mailtoSubmit" class="btn" type="submit">Send Email</button>
+            <button type="reset" class="btn btn-outline">Reset</button>
           </div>
 
-          <!-- Contact Form -->
-          <form id="contactForm" name="yann-tchamba-contact"
-                action="https://formspree.io/f/yourformid"
-                method="POST" novalidate class="contact-form" aria-label="Contact form">
+          <p id="mailStatus" class="form-feedback" aria-live="polite"></p>
+        </form>
 
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" required autocomplete="name" />
+        <aside class="contact-aside">
+          <div class="social-links">
+            <h4>Social profiles</h4>
+            <ul>
+              <li><a href="https://github.com/new" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/yann-tchamba-76097a2b9/" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://www.snapchat.com/web/1ff18e8d-429f-5d04-bf0c-38ce2ab6aaa2" target="_blank" rel="noopener">Snapchat</a></li>
+            </ul>
+          </div>
 
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required autocomplete="email" />
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
-
-            <div class="form-actions">
-              <button type="submit" class="btn">Send</button>
-              <button type="reset" class="btn btn-outline">Reset</button>
-            </div>
-
-            <div class="form-meta">
-              <div id="formFeedback" class="form-feedback" aria-live="polite"></div>
-              <div id="successCheck" class="success-check" role="status" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span>Sent</span>
-              </div>
-            </div>
-          </form>
-
-          <!-- Animated contact icons -->
-          <ul class="contact-icons" aria-hidden="false">
-            <li><svg viewBox="0 0 24 24" class="ci-icon"><path d="M3 7.5v9A1.5 1.5 0 0 0 4.5 18h15" stroke="currentColor" fill="none" stroke-width="1.4"/></svg><span>Email</span></li>
-            <li><svg viewBox="0 0 24 24" class="ci-icon"><path d="M22 16.92v3a2 2 0 0 1-2.18 2" stroke="currentColor" fill="none" stroke-width="1.4"/></svg><span>Phone</span></li>
-            <li><svg viewBox="0 0 24 24" class="ci-icon"><path d="M12 2l3 7h7l-6 4 2 7-6-4-6 4 2-7L2 9h7z" stroke="currentColor" fill="none" stroke-width="1.4"/></svg><span>Office</span></li>
-          </ul>
-
-        </div>
-
-        <!-- RIGHT: MAP + HOURS + CTA -->
-        <aside class="right-col" aria-label="Location and hours">
-          <div class="map-wrap">
+          <div class="map-box">
+            <h4>Location</h4>
             <div class="map-frame">
-              <iframe
-                title="Abito Salford location"
+              <iframe title="Abito Salford location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2371.2794289576406!2d-2.299706323909907!3d53.47034527235059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae4eae442b01%3A0xa67b5cbb6743505d!2sAbito%20Salford!5e0!3m2!1sen!2uk!4v1709411110000!5m2!1sen!2uk"
                 loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              <div class="map-pin" aria-hidden="true"></div>
             </div>
-
-            <div class="map-cta">
-              <a class="btn-outline small" id="directionsBtn" target="_blank"
-                 href="https://www.google.com/maps/dir/?api=1&destination=Abito+Salford">Get Directions</a>
-
-              <button id="openHoursToggle" class="btn small">Opening Hours</button>
-            </div>
+            <a class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&destination=Abito+Salford" target="_blank">Get Directions</a>
           </div>
-
-          <div class="hours-card" id="hoursCard" aria-hidden="true">
-            <h4>Opening Hours</h4>
-            <ul>
-              <li><strong>Mon–Fri:</strong> 9:00 — 18:00</li>
-              <li><strong>Sat:</strong> 10:00 — 16:00</li>
-              <li><strong>Sun:</strong> Closed</li>
-            </ul>
-            <a class="btn small" href="tel:+447454101201">Call Now</a>
-          </div>
-
-          <!-- Static Chat Bubble trigger -->
-          <button id="chatBubble" class="chat-bubble" aria-label="Chat with Yann">
-            <span>Chat with Yann</span>
-          </button>
         </aside>
-
       </div>
     </section>
   </main>
-
-  <!-- Floating WhatsApp -->
-  <a id="whatsappFloat" class="whatsapp-float" href="https://wa.me/447454101201" target="_blank" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24" width="26" height="26"><path d="M21 11.5A9.5 9.5 0 1 1 11.5 2 9.4 9.4 0 0 1 21 11.5z" fill="#25D366"/><path d="M17.3 15.3c-.3-.1-1.7-.8-1.9-.9-.2-.1-.3-.2-.5.1-.1.2-.6.9-.7 1.1-.1.1-.2.1-.4.0-.5-.2-1.9-1.1-3.1-2.6-.9-1-1.5-2.1-1.6-2.4-.1-.3 0-.3.1-.4.1-.1.3-.2.4-.3.2-.1.3-.2.4-.3.1-.1.1-.2.2-.4.1-.2 0-.4-.1-.6-.1-.2-1.2-2.6-1.7-3.6-.2-.3-.4-.2-.6-.2-.4 0-1.1 0-1.9.9-.8.9-1.6 2.2-1.6 4.5s1.7 5.2 1.9 5.6c.2.4 3.4 5.3 8.3 6.5 4.9 1.2 5.1-1.6 5.1-2.5s-.5-1.4-.9-1.6z" fill="#FFF"/></svg>
-  </a>
-
-  <!-- Floating CALL NOW -->
-  <a id="callNowFloat" class="call-float" href="tel:+447454101201" aria-label="Call now">
-    <svg viewBox="0 0 24 24" width="22" height="22"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.77 19.77 0 0 1 3 5.18 2 2 0 0 1 5 3h3" stroke="#fff" fill="none" stroke-width="1.6" stroke-linecap="round"/></svg>
-  </a>
 
   <footer class="site-footer">
     <div class="container">
