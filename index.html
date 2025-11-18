@@ -2,28 +2,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yann Tchamba - Home</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Yann Tchamba — Home</title>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-<header>
-<h1>Welcome to Yann Tchamba’s Portfolio</h1>
-<nav>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="contact.html">Contact</a></li>
-<li><a href="skills.html">Skills</a></li>
-<li><a href="showcase.html">Business Showcase</a></li>
-<li><a href="problem-solving.html">Problem Solving</a></li>
-</ul>
-</nav>
-</header>
+  <header class="site-header">
+    <div class="container header-flex">
+      <h1 class="brand">Yann Tchamba</h1>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+      <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="showcase.html">Projects</a>
+        <a href="problem-solving.html">Problem-Solving</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<section>
-<h2>Professional Summary</h2>
-<p>Visionary Chief Technology Officer (CTO) with a proven record of leading digital transformation, driving innovation and aligning technology with business strategy. Skilled in cloud computing, cybersecurity, and data-driven decision making. Experienced in managing complex projects and high-performing teams. Passionate about leveraging emerging technologies to create solutions, enhance efficiency, and deliver measurable business impact.</p>
-</section>
+  <main class="container">
+    <section class="hero card glass">
+      <h2>Chief Technology Officer & Digital Innovator</h2>
+      <p>Transforming ideas into scalable solutions through innovation and leadership.</p>
+      <div class="hero-actions">
+        <a class="btn" href="showcase.html">See My Projects</a>
+        <a class="btn-outline" href="contact.html">Get in Touch</a>
+      </div>
+    </section>
+
+    <section class="card glass">
+      <h2>Professional Summary</h2>
+      <p>
+        Visionary Chief Technology Officer (CTO) with a proven record of leading digital transformation, driving innovation and aligning technology with business strategy. Skilled in cloud computing, cybersecurity and data-driven decision making, with experience managing complex projects and high-performing teams.
+      </p>
+
+      <ul class="quick-facts">
+        <li><strong>Location:</strong> 621 Abito Clippers Quay, Salford, M50 3BP</li>
+        <li><strong>Phone:</strong> <a href="tel:+447454101201">07454 101201</a></li>
+        <li><strong>Email:</strong> <a href="mailto:Yannfreddy1975@gmail.com">Yannfreddy1975@gmail.com</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Yann Tchamba</p>
+  </footer>
+
+  <script src="assets/script.js"></script>
 </body>
 </html>
