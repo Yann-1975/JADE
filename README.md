@@ -1,9 +1,8 @@
 
-yann-website/
-├─ index.html
-├─ contact.html
-├─ skills.html
-├─ business.html
-├─ problemsolving.html
-├─ assets/style.css
-└─ script.js
+index.html
+- contact.html
+- skills.html
+- showcase.html
+- problem-solving.html
+- assets/style.css
+- assets/script.js
