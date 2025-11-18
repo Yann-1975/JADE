@@ -1,7 +1,43 @@
 
-assets/dishes/dish1.jpg  ← Margherita Pizza
-assets/dishes/dish2.jpg  ← Spaghetti Carbonara
-assets/dishes/dish3.jpg  ← Lasagna al Forno
-assets/dishes/dish4.jpg  ← Risotto ai Funghi
-assets/dishes/dish5.jpg  ← Tagliatelle al Pesto
-assets/dishes/dish6.jpg  ← Tiramisu
+// Footer years (applies to year, year2, year3, year4, year5)
+const years = ["year","year2","year3","year4","year5"];
+years.forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.textContent = new Date().getFullYear();
+});
+
+// Mobile nav toggle (single handler used across pages)
+const menuToggle = document.getElementById("menuToggle");
+if (menuToggle) {
+  menuToggle.addEventListener("click", () => {
+    const nav = document.getElementById("mainNav");
+    if (nav) nav.classList.toggle("active");
+  });
+}
+
+// Booking form: builds a mailto link with form data and opens mail client
+const bookingForm = document.getElementById("bookingForm");
+if (bookingForm) {
+  bookingForm.addEventListener("submit", (ev) => {
+    ev.preventDefault();
+    const n = document.getElementById("custName")?.value.trim() || "";
+    const em = document.getElementById("custEmail")?.value.trim() || "";
+    const phone = document.getElementById("phone")?.value.trim() || "";
+    const date = document.getElementById("date")?.value.trim() || "";
+    const people = document.getElementById("people")?.value.trim() || "";
+    const notes = document.getElementById("notes")?.value.trim() || "";
+
+    if (!n || !em || !phone) {
+      alert("Please complete name, email and phone fields.");
+      return;
+    }
+
+    const to = "reservations@demo-restaurant.local";
+    const subject = encodeURIComponent(`Booking request from ${n}`);
+    const body = encodeURIComponent(
+      `Name: ${n}\nEmail: ${em}\nPhone: ${phone}\nPreferred date/time: ${date}\nGuests: ${people}\nNotes: ${notes}`
+    );
+
+    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+  });
+}
