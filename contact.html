@@ -12,10 +12,10 @@
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <h1>Yann Tchamba</h1>
+        <a href="index.html" class="logo">Yann Tchamba</a>
         <p class="subtitle">Chief Technology Officer</p>
       </div>
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Main navigation">
         <a href="index.html" class="nav-link">Home</a>
         <a href="skills.html" class="nav-link">Skills</a>
         <a href="business.html" class="nav-link">Business Showcase</a>
@@ -33,27 +33,28 @@
         <a href="mailto:Yannfreddy1975@gmail.com">Yannfreddy1975@gmail.com</a>
       </p>
 
-      <div class="contact-wrapper">
-        <form id="mailtoForm" class="contact-form" aria-label="Contact form">
-          <label for="fullname">Name</label>
-          <input id="fullname" name="fullname" type="text" required />
+      <div class="contact-grid">
+        <div class="form-column">
+          <h3>Send a message</h3>
+          <form id="contactMailtoForm" class="contact-form" aria-label="Contact form">
+            <label for="c-name">Your name</label>
+            <input id="c-name" name="cname" type="text" required>
 
-          <label for="emailaddr">Email</label>
-          <input id="emailaddr" name="emailaddr" type="email" required />
+            <label for="c-email">Your email</label>
+            <input id="c-email" name="cemail" type="email" required>
 
-          <label for="messagebody">Message</label>
-          <textarea id="messagebody" name="messagebody" rows="6" required></textarea>
+            <label for="c-message">Message</label>
+            <textarea id="c-message" name="cmessage" rows="6" required></textarea>
 
-          <div class="form-actions">
-            <button id="mailtoSubmit" class="btn" type="submit">Send Email</button>
-            <button type="reset" class="btn btn-outline">Reset</button>
-          </div>
+            <div class="form-actions">
+              <button type="submit" class="btn">Send</button>
+              <button type="reset" class="btn btn-outline">Reset</button>
+            </div>
 
-          <p id="mailStatus" class="form-feedback" aria-live="polite"></p>
-        </form>
+            <p id="contactStatus" class="form-feedback" aria-live="polite"></p>
+          </form>
 
-        <aside class="contact-aside">
-          <div class="social-links">
+          <div class="socials">
             <h4>Social profiles</h4>
             <ul>
               <li><a href="https://github.com/new" target="_blank" rel="noopener">GitHub</a></li>
@@ -62,15 +63,23 @@
             </ul>
           </div>
 
-          <div class="map-box">
-            <h4>Location</h4>
-            <div class="map-frame">
-              <iframe title="Abito Salford location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2371.2794289576406!2d-2.299706323909907!3d53.47034527235059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae4eae442b01%3A0xa67b5cbb6743505d!2sAbito%20Salford!5e0!3m2!1sen!2uk!4v1709411110000!5m2!1sen!2uk"
-                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <a class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&destination=Abito+Salford" target="_blank">Get Directions</a>
+          <div class="map-cta-row">
+            <button class="btn-outline" id="reserveBtn2">Reserve a Table</button>
           </div>
+        </div>
+
+        <aside class="map-column" aria-label="Location map">
+          <h3>Location</h3>
+          <div class="map-frame">
+            <!-- Embedded Google Map iframe (simple embed) -->
+            <iframe
+              title="Abito Salford"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2371.2794289576406!2d-2.299706323909907!3d53.47034527235059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae4eae442b01%3A0xa67b5cbb6743505d!2sAbito%20Salford!5e0!3m2!1sen!2uk!4v1709411110000!5m2!1sen!2uk"
+              width="100%" height="340" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <p class="muted">Click "Get Directions" to open Google Maps with directions to the address.</p>
+          <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=Abito+Salford" target="_blank">Get Directions</a>
         </aside>
       </div>
     </section>
@@ -78,7 +87,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>© 2025 Yann Tchamba — All rights reserved.</p>
+      <small>© 2025 Yann Tchamba</small>
     </div>
   </footer>
 </body>
