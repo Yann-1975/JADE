@@ -2,53 +2,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Problem Solving - Restaurant Digital Transformation</title>
-<link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bella-Vita — Digital Transformation Demo</title>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-<header>
-<h1>Restaurant Digital Transformation</h1>
-<nav>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="contact.html">Contact</a></li>
-<li><a href="skills.html">Skills</a></li>
-<li><a href="showcase.html">Business Showcase</a></li>
-<li><a href="problem-solving.html">Problem Solving</a></li>
-</ul>
-</nav>
-</header>
+  <header class="site-header">
+    <div class="container header-flex">
+      <h1 class="brand">Bella-Vita — Restaurant</h1>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+      <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="showcase.html">Projects</a>
+        <a href="problem-solving.html">Problem-Solving</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<section>
-<h2>Business Context</h2>
-<p>The restaurant aims to modernize communication, improve customer engagement, and streamline the booking process through digital transformation.</p>
+  <main class="container">
+    <section class="card glass">
+      <h2>Bella-Vita Italian Restaurant</h2>
+      <p>A demo digital experience showcasing menu presentation, booking flow, and social integration for a small restaurant.</p>
+    </section>
 
-<h2>Social Media</h2>
-<ul>
-<li><a href="#">Facebook</a></li>
-<li><a href="#">Instagram</a></li>
-<li><a href="#">Twitter/X</a></li>
-</ul>
+    <section class="card glass">
+      <h2>🍽 Bella-Vita Menu</h2>
 
-<h2>Contact Details</h2>
-<p>Email: restaurant@example.com</p>
-<p>Phone: 0200 123 4567</p>
+      <h3>Starters</h3>
+      <ul class="menu-list">
+        <li>Bruschetta — £6.50</li>
+        <li>Garlic Bread — £5.50</li>
+        <li>Caprese Salad — £7.00</li>
+      </ul>
 
-<h2>Booking / Feedback Form</h2>
-<form id="contactForm">
-<label>Name:</label>
-<input type="text" id="name" required>
+      <h3>Main Courses</h3>
+      <ul class="menu-list">
+        <li>Margherita Pizza — £10.00</li>
+        <li>Spaghetti Carbonara — £12.00</li>
+        <li>Lasagna al Forno — £13.50</li>
+        <li>Tagliatelle Alfredo — £12.00</li>
+      </ul>
 
-<label>Message / Booking Request:</label>
-<textarea id="message" required></textarea>
+      <h3>Desserts</h3>
+      <ul class="menu-list">
+        <li>Tiramisu — £6.00</li>
+        <li>Panna Cotta — £5.50</li>
+        <li>Gelato Trio — £4.50</li>
+      </ul>
+    </section>
 
-<button type="submit">Generate Email</button>
-</form>
+    <section class="card glass">
+      <h2>Booking Form</h2>
+      <form id="bookingForm" class="form">
+        <label for="custName">Name</label>
+        <input id="custName" required />
 
-<p id="emailOutput"></p>
-</section>
+        <label for="custEmail">Email</label>
+        <input id="custEmail" type="email" required />
+
+        <label for="phone">Phone</label>
+        <input id="phone" required />
+
+        <label for="date">Date & Time</label>
+        <input id="date" placeholder="e.g., 2025-12-24 19:00" required />
+
+        <label for="people">Guests</label>
+        <input id="people" type="number" min="1" value="2" required />
+
+        <label for="notes">Notes / Special requests</label>
+        <textarea id="notes" rows="3"></textarea>
+
+        <button class="btn" type="submit">Send Booking</button>
+      </form>
+      <p class="muted">Form generates an email to reservations@demo-restaurant.local (prototype behaviour).</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year5"></span> Bella-Vita</p>
+  </footer>
+
+  <script src="assets/script.js"></script>
 </body>
 </html>
