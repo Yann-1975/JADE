@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Yann Tchamba — Chief Technology Officer</title>
+  <title>Yann Tchamba — CTO</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
@@ -12,10 +12,11 @@
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <h1>Yann Tchamba</h1>
+        <a href="index.html" class="logo">Yann Tchamba</a>
         <p class="subtitle">Chief Technology Officer</p>
       </div>
-      <nav class="main-nav">
+
+      <nav class="main-nav" aria-label="Main navigation">
         <a href="index.html" class="nav-link active">Home</a>
         <a href="skills.html" class="nav-link">Skills</a>
         <a href="business.html" class="nav-link">Business Showcase</a>
@@ -26,47 +27,84 @@
   </header>
 
   <main class="container">
-    <section class="hero">
-      <div class="hero-left">
-        <img src="assets/profile.jpg" alt="Yann Tchamba" class="profile-photo" />
-      </div>
-      <div class="hero-right">
-        <h2>Visionary CTO driving digital transformation</h2>
-        <p>
-          I am a Chief Technology Officer with a proven record of leading digital transformation,
-          driving innovation and aligning technology with business strategy. Skilled in cloud computing,
-          cybersecurity, software architecture and data-driven decision making. I lead complex projects
-          and high-performing teams to deliver measurable business impact.
-        </p>
+    <section class="hero gradient-bg">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h1>Yann Tchamba</h1>
+          <p class="lead">
+            Visionary Chief Technology Officer driving digital transformation, security and cloud innovation.
+          </p>
+          <p>
+            I align technology with business strategy, lead high-performing teams and design practical solutions
+            that deliver measurable impact.
+          </p>
 
-        <ul class="quick-stats">
-          <li><strong>Role:</strong> CTO — NovaEdge Technologies (2021–Present)</li>
-          <li><strong>Education:</strong> PhD Software Development — Salford University</li>
-          <li><strong>Interests:</strong> Cloud, Security, Automation, Mentoring</li>
-        </ul>
+          <ul class="stat-list">
+            <li><strong>CTO</strong> — NovaEdge Technologies</li>
+            <li><strong>PhD</strong> — Software Development (Salford)</li>
+            <li><strong>Interests:</strong> cloud, cybersecurity, automation</li>
+          </ul>
 
-        <div class="cta-row">
-          <a class="btn" href="business.html">View Projects</a>
-          <a class="btn btn-outline" href="contact.html">Contact Me</a>
+          <div class="cta-row">
+            <a class="btn" href="business.html">View Projects</a>
+            <button class="btn btn-outline" id="reserveBtn">Reserve a Table</button>
+          </div>
         </div>
 
-        <p class="muted small">You can view my CV details on the Skills & Business pages.</p>
+        <!-- FIXED IMAGE PATH -->
+        <div class="hero-photo">
+          <img src="yann.jpg" alt="Yann Tchamba">
+        </div>
       </div>
     </section>
 
     <section class="section">
-      <h3>About — In brief</h3>
+      <h2>Professional Summary</h2>
       <p>
-        Passionate about leveraging emerging technologies to create solutions, enhance efficiency
-        and deliver measurable business impact. I enjoy solving complex problems and mentoring teams
-        to deliver reliable, secure and scalable systems.
+        Visionary CTO with a proven record of leading digital transformation, driving innovation and aligning technology
+        with business strategy. Skilled in cloud computing, cybersecurity and data-driven decision making.
       </p>
     </section>
   </main>
 
+  <!-- Modal (unchanged) -->
+  <div id="reserveModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="reserveTitle">
+    <div class="modal-panel" role="document">
+      <button class="modal-close" id="modalClose" aria-label="Close reservation dialog">&times;</button>
+      <h3 id="reserveTitle">Reserve a table — La Bella Vita</h3>
+
+      <form id="reserveForm" class="reserve-form" aria-label="Reservation form">
+        <label for="r-name">Full name</label>
+        <input id="r-name" type="text" required>
+
+        <label for="r-email">Email</label>
+        <input id="r-email" type="email" required>
+
+        <label for="r-phone">Phone</label>
+        <input id="r-phone" type="tel">
+
+        <label for="r-datetime">Date & time</label>
+        <input id="r-datetime" type="datetime-local" required>
+
+        <label for="r-party">Party size</label>
+        <input id="r-party" type="number" min="1" value="2" required>
+
+        <label for="r-notes">Notes / requests</label>
+        <textarea id="r-notes" rows="4"></textarea>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Send reservation</button>
+          <button type="button" class="btn btn-outline" id="modalCancel">Cancel</button>
+        </div>
+
+        <p id="reserveStatus" class="form-feedback" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
   <footer class="site-footer">
     <div class="container">
-      <p>© 2025 Yann Tchamba — All rights reserved.</p>
+      <small>© 2025 Yann Tchamba • Salford / London</small>
     </div>
   </footer>
 </body>
